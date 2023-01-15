@@ -1,0 +1,244 @@
+ <!DOCTYPE html>
+  <html>
+  <head>
+  <title>Welcome To Registration Form</title>
+  	<link rel="icon" href="https://thumbs.dreamstime.com/b/register-now-icon-16757253.jpg">
+  <body style=background-image:url('https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/Vv03xyNwg/videoblocks-gentle-pink-blue-watercolor-stain_rgzwqkplc7_thumbnail-1080_05.png')
+</body>
+
+  <script type="text/javascript">
+       function registration()
+    {
+
+        var name= document.getElementById("t1").value;
+        var email= document.getElementById("t2").value;
+        var uname= document.getElementById("t3").value;
+        var pwd= document.getElementById("t4").value;           
+        var cpwd= document.getElementById("t5").value;
+        
+        //email id expression code
+        var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+        var letters = /^[A-Za-z]+$/;
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if(name=='')
+        {
+            alert('Please enter your name');
+        }
+        else if(!letters.test(name))
+        {
+            alert('Name field required only alphabet characters');
+        }
+        else if(email=='')
+        {
+            alert('Please enter your user email id');
+        }
+        else if (!filter.test(email))
+        {
+            alert('Invalid email');
+        }
+        else if(uname=='')
+        {
+            alert('Please enter the user name.');
+        }
+        else if(!letters.test(uname))
+        {
+            alert('User name field required only alphabet characters');
+        }
+        else if(pwd=='')
+        {
+            alert('Please enter Password');
+        }
+        else if(cpwd=='')
+        {
+            alert('Enter Confirm Password');
+        }
+        else if(!pwd_expression.test(pwd))
+        {
+            alert ('Upper case, Lower case, Special character and Numeric letter are required in Password filed');
+        }
+        else if(pwd != cpwd)
+        {
+            alert ('Password not Matched');
+        }
+        else if(document.getElementById("t5").value.length < 6)
+        {
+            alert ('Password minimum length is 6');
+        }
+        else if(document.getElementById("t5").value.length > 12)
+        {
+            alert ('Password max length is 12');
+        }
+        else
+        {                                           
+               alert('Thank You for Registration & You are Redirecting to Website');
+               // Redirecting to other page or webste code. 
+               window.location = "index.html"; 
+        }
+    }
+  </script>
+  </head>
+ 
+    <body>
+    <!-- Main div code -->
+    <div id="main">
+    <div class="h-tag">
+    <center><h2>Register Your Account</h2></center>
+    </div>
+    <!-- create account div -->
+    <div class="login">
+    <table cellspacing="2" align="center" cellpadding="8" border="0">
+    <tr>
+    <td align="right">Enter Name :</td>
+    <td><input type="text" placeholder="Enter user here" id="t1" class="tb" /></td>
+    </tr>
+    <tr>
+    <td align="right">Enter Email ID :</td>
+    <td><input type="text" placeholder="Enter Email ID here" id="t2" class="tb" /></td>
+    </tr>
+    <tr>
+    <td align="right">Enter Username :</td>
+    <td><input type="text" placeholder="Enter Username here" id="t3" class="tb" /></td>
+    </tr>
+    <tr>
+    <td align="right">Enter Password :</td>
+    <td><input type="password" placeholder="Enter Password here" id="t4" class="tb" /></td>
+    </tr>
+    <tr>
+    <td align="right">Enter Confirm Password :</td>
+    <td><input type="password" placeholder="Enter Password here" id="t5" class="tb" /></td>
+    </tr>
+	<td align="right">Gender:</td>
+    <td><input type="Gender" placeholder="Male/female/others" id="t5" class="tb" /></td>
+    </tr>
+	<td align="right">stream:</td>
+    <td><input type="Gender" placeholder="please enter your stream" id="t5" class="tb" /></td>
+    </tr>
+	</tr>
+	<td align="right">Collage:</td>
+    <td><input type="Gender" placeholder="enter collage name" id="t5" class="tb" /></td>
+    </tr>
+	<td align="right">About you:</td>
+    <td><input type="Gender" placeholder="Tell more about Yourself" id="t5" class="tb" /></td>
+    </tr>
+
+    <tr>
+    <td></td>
+    <td>
+    
+    <input type="submit" value="registration" class="btn" onclick="registration()" /></td>
+    </tr>
+    </table>
+    </div>
+    <!-- create account box ending here.. -->
+    </div>
+	<style>
+    <!-- Main div ending here... -->
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: url('https://wallpaperaccess.com/full/1567836.jpg');
+    background-size: cover;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 100px;
+}
+.logo{
+    max-height: 60px;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+nav ul li a{
+    color: #3AAFA9;
+    position: relative;
+    padding: 5px 0;
+}
+nav ul li a:hover{
+    color: #2B7A78;
+}
+nav ul li a:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #2B7A78;
+    transition: .3s;
+    bottom: 0;
+}
+nav ul li a:hover:after{
+    width: 100%;
+}
+.btn{
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 30px;
+    border-radius: 500px;
+    display: inline-block;
+    font-weight: 500;
+    transition: all .4s ease-in-out;
+    background-size: 152% 100%;
+    background: #3AAFA9;
+    border: 2px solid #2B7A78;
+}
+.btn:hover{
+    background: transparent;
+    border-color: #2B7A78;
+    color: #2B7A78;
+}
+.content{
+    position: absolute;
+    top: 35%;
+    left: 8%;
+}
+.content .title{
+    color: #1f1f25;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: inline-block;
+    margin-bottom: 20px;
+    background: linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%,#fd4766 79.69%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.content h1{
+    color: #1f1f25;
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 70px;
+    text-transform: inherit;
+    width: 50%;
+}
+.content h1 span{
+    color: #3AAFA9;
+}
+.content p{
+    width: 40%;
+    color: #17252A;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+</style>
+    </body>
+    </html>
